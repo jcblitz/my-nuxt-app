@@ -73,3 +73,6 @@ Using the following for development purposes
 
 * [Mocking server](https://amock.io/)
 * [Data generation](https://mockaroo.com/)
+* [UI](https://buefy.org/)
+* [Deployment](https://www.netlify.com/)
+* Also used CircleCI, but doesn't seem to matter with Netlify doing the CI too
