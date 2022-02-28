@@ -17,36 +17,14 @@
     </section>
 
     <section class="section">
-      <div class="columns is-mobile">
-        <card
-          v-for="collection in collections"
-          :key="collection.name"
+      <div class="columns is-desktop is-multiline">
+        <div v-for="collection in collections" :key="collection.id" class="column is-3">
+          <card
           :title="collection.name"
-          icon="github"
-        >
+          icon="github">
           Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
         </card>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="columns is-mobile">
-        <card title="Guitars" icon="github">
-          Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
-        </card>
-
-        <card title="Responsive" icon="cellphone-link">
-          <b class="has-text-grey"> Every </b> component is responsive
-        </card>
-
-        <card title="Modern" icon="alert-decagram">
-          Built with <a href="https://vuejs.org/"> Vue.js </a> and
-          <a href="http://bulma.io/"> Bulma </a>
-        </card>
-
-        <card title="Lightweight" icon="arrange-bring-to-front">
-          No other internal dependency
-        </card>
+        </div>
       </div>
     </section>
   </div>
@@ -55,45 +33,24 @@
 <script>
 import Card from '~/components/Card'
 
+
 export default {
   name: 'IndexPage',
-
   components: {
     Card,
   },
   data() {
     return {
-      collections: [
-        {
-          title: 'Guitars',
-          icon: null,
-          name: 'Guitars',
-          shortDescription: 'Nothing fancy, but I like them',
-        },
-        {
-          title: 'Funko Pops',
-          icon: null,
-          name: 'Funko',
-          shortDescription: 'My bobble heads, mostly Funko',
-        },
-        {
-          title: 'Halloween Skeletons',
-          icon: null,
-          name: 'Halloween Skeletons',
-          shortDescription: 'Nothing fancy, but I like them',
-        },
-        {
-          title: 'Workshop Tools',
-          icon: null,
-          name: 'Tools',
-          shortDescription: 'My bobble heads, mostly Funko',
-        },
-      ],
+      posts: [],
+      collections: [],
     }
   },
+  async fetch() {
+      this.collections = await fetch('https://amock.io/api/jcblitz/collections').then(res => res.json())
+    },
   methods: {
     clickMe: () => {
-      // no op
+      
     },
   },
 }

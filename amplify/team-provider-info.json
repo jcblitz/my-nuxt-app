@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mynuxtapp-staging-213006-authRole",
+      "UnauthRoleArn": "arn:aws:iam::990041387761:role/amplify-mynuxtapp-staging-213006-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::990041387761:role/amplify-mynuxtapp-staging-213006-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mynuxtapp-staging-213006-deployment",
+      "UnauthRoleName": "amplify-mynuxtapp-staging-213006-unauthRole",
+      "StackName": "amplify-mynuxtapp-staging-213006",
+      "StackId": "arn:aws:cloudformation:us-east-1:990041387761:stack/amplify-mynuxtapp-staging-213006/6ef4d630-9814-11ec-8ef3-0a0d0cda0ee1",
+      "AmplifyAppId": "d117f22zlxt723"
+    }
+  }
+}
